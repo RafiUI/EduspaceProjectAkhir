@@ -1,4 +1,3 @@
-// src/components/Categori.js
 import React, { useState, useEffect } from "react";
 import axiosInstance from "../axiosInstance"; // Import the Axios instance
 import { Link } from "react-router-dom";
@@ -33,7 +32,7 @@ const Categori = () => {
 
   // Filter tutors based on selected category
   const filteredTutors =
-    selectedCategory == "All"
+    selectedCategory === "All"
       ? tutors
       : tutors.filter((tutor) => tutor.category.name === selectedCategory);
 
@@ -85,7 +84,7 @@ const Categori = () => {
           filteredTutors.map((tutor) => (
             <div
               key={tutor._id}
-              className="card card-compact bg-base-100 w-96 shadow-xl"
+              className="card card-compact bg-base-100 w-80 shadow-xl"
             >
               <figure className="h-48 w-full overflow-hidden">
                 <img

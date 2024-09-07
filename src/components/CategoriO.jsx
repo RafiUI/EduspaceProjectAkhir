@@ -103,40 +103,44 @@ const CategoriO = () => {
 
       {/* Kategori card */}
       <div className="flex flex-wrap justify-center gap-8 py-8">
-        {filteredCards.map((discussion) => (
-          <div
-            key={discussion._id}
-            className="card card-compact bg-base-100 w-96 shadow-xl"
-          >
-            <figure className="h-48 w-full overflow-hidden">
-              <img
-                className="w-full h-full"
-                src={
-                  discussion.image
-                    ? `http://localhost:5000${discussion.image}`
-                    : "default-image.png"
-                } // Handle default image if null
-                alt={discussion.title}
-              />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">{discussion.title}</h2>
-              <p>{discussion.description}</p>
-              <div className="card-actions justify-end">
-                <button
-                  className="btn btn-primary"
-                  onClick={() =>
-                    navigate(`/diskusi/${discussion._id}`, {
-                      state: { discussion },
-                    })
-                  }
-                >
-                  Join Now
-                </button>
+        {filteredCards.length > 0 ? (
+          filteredCards.map((discussion) => (
+            <div
+              key={discussion._id}
+              className="card card-compact bg-base-100 w-80 shadow-xl"
+            >
+              <figure className="h-48 w-full overflow-hidden">
+                <img
+                  className="w-full h-full"
+                  src={
+                    discussion.image
+                      ? `http://localhost:5000${discussion.image}`
+                      : "default-image.png"
+                  } // Handle default image if null
+                  alt={discussion.title}
+                />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">{discussion.title}</h2>
+                <p>{discussion.description}</p>
+                <div className="card-actions justify-end">
+                  <button
+                    className="btn btn-primary"
+                    onClick={() =>
+                      navigate(`/diskusi/${discussion._id}`, {
+                        state: { discussion },
+                      })
+                    }
+                  >
+                    Join Now
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          <p>No discussions available for this category.</p>
+        )}
       </div>
     </div>
   );

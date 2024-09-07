@@ -7,7 +7,8 @@ const MyClass = () => {
   const [selectedPart, setSelectedPart] = useState(0);
   const [purchasedClasses, setPurchasedClasses] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null); // Add error handling state
+  const [error, setError] = useState(null); // Error handling state
+  const [isCompleted, setIsCompleted] = useState(false); // Track completion status
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,7 +40,15 @@ const MyClass = () => {
     };
 
     fetchData();
-  }, []); // Include an empty dependency array to ensure it runs once
+  }, []);
+
+  const handlePartClick = (index) => {
+    setSelectedPart(index);
+  };
+
+  const handleComplete = () => {
+    setIsCompleted(true);
+  };
 
   if (loading) {
     return <div>Loading...</div>;
@@ -48,10 +57,6 @@ const MyClass = () => {
   if (error) {
     return <div>{error}</div>;
   }
-
-  const handlePartClick = (index) => {
-    setSelectedPart(index);
-  };
 
   return purchasedClasses.map((e, classIndex) => (
     <div
@@ -104,6 +109,23 @@ const MyClass = () => {
             </li>
           ))}
         </ul>
+        {/* Show "Selesai" button when the last part is selected */}
+        {e.tutor.parts.length > 0 && selectedPart === e.tutor.parts.length - 1 && !isCompleted && (
+          <div className="mt-4">
+            <button
+              onClick={handleComplete}
+              className="btn btn-primary w-full"
+            >
+              Selesai
+            </button>
+          </div>
+        )}
+        {/* Show completion message only after the button is clicked */}
+        {isCompleted && (
+          <p className="text-green-500 mt-2">
+            Terima kasih, Anda telah menyelesaikan kelas ini!
+          </p>
+        )}
       </div>
     </div>
   ));

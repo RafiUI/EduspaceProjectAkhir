@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useContext } from "react";
 import { FaRegUser } from "react-icons/fa";
+import { useLocation } from "react-router-dom"; // Import useLocation
 import Modal from "./Modal";
 import { AuthContext } from "../contexts/AuthProvider";
 import Profile from "./Profile";
 
 const Navbar = () => {
   const { user } = useContext(AuthContext);
+  const location = useLocation(); // Get the current location
 
   const [isSticky, setSticky] = useState(false);
 
@@ -22,16 +24,40 @@ const Navbar = () => {
     };
   }, []);
 
+  // Function to determine if the nav item is active
+  const isActive = (path) => location.pathname === path;
+
   const navItems = (
     <>
       <li>
-        <a href="/">Home</a>
+        <a
+          href="/"
+          className={`${
+            isActive("/") ? "text-primary font-bold underline" : ""
+          }`}
+        >
+          Home
+        </a>
       </li>
       <li>
-        <a href="/TutorWithExpert">Tutor With Expert</a>
+        <a
+          href="/TutorWithExpert"
+          className={`${
+            isActive("/TutorWithExpert") ? "text-primary font-bold underline" : ""
+          }`}
+        >
+          Tutor With Expert
+        </a>
       </li>
       <li>
-        <a href="/OpenDiscuss">Open Discuss</a>
+        <a
+          href="/OpenDiscuss"
+          className={`${
+            isActive("/OpenDiscuss") ? "text-primary font-bold underline" : ""
+          }`}
+        >
+          Open Discuss
+        </a>
       </li>
     </>
   );
@@ -81,7 +107,6 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navItems}</ul>
         </div>
 
-        {/* Conditionally Render Login or Profile */}
         <div className="navbar-end">
           {user ? (
             <Profile user={user} /> // If user is logged in, show profile
@@ -94,7 +119,6 @@ const Navbar = () => {
             </button>
           )}
 
-          {/* Modal for Login */}
           <Modal />
         </div>
       </div>

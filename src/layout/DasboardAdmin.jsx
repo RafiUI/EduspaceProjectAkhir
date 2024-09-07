@@ -72,13 +72,13 @@ const DasboardAdmin = () => {
                 Open Discuss
               </Link>
             </li>
-            <li>
+            <li className="mt-3">
               <Link to="/dashboard/Transaction">
                 <LiaFileInvoiceSolid />
                 Transaction
               </Link>
             </li>
-            <li>
+            <li className="mt-3">
               <Link to="/dashboard/users">
                 <FaUsers />
                 Users

@@ -1,0 +1,51 @@
+[
+    {
+      "_id": 1,
+      "title": "UI & UX Design",
+      "deskripsi": "Diskusi bareng seputar UI dan UX, yuk join!",
+      "category": "UI & UX",
+      "image": "/public/uiuxdiscuss.png",
+      "jumlahOrang": 30
+    },
+    {
+      "_id": 2,
+      "title": "Product Management",
+      "deskripsi": "Halo semua! Diskusi bareng yuk seputar Product Management.",
+      "category": "Product Management",
+      "image": "/public/pmdiscuss.png",
+      "jumlahOrang": 25
+    },
+    {
+      "_id": 3,
+      "title": "Front End",
+      "deskripsi": "Komunitas seputar Front End, yuk join!",
+      "category": "Front End",
+      "image": "/public/frontdiscuss.png",
+      "jumlahOrang": 19
+    },
+    {
+      "_id": 4,
+      "title": "Back End",
+      "deskripsi": "Bingung? Join sekarang dan diskusikan di komunitas back end.",
+      "category": "Back End",
+      "image": "/public/backdiscuss.png",
+      "jumlahOrang": 15
+    },
+    {
+      "_id": 5,
+      "title": "Mobile Development",
+      "deskripsi": "Kalian bisa belajar dan diskusiin semua tentang Mobile Development disini!",
+      "category": "Mobile Development",
+      "image": "/public/mobilediscuss.png",
+      "jumlahOrang": 15
+    },
+    {
+      "_id": 6,
+      "title": "Digital Marketing",
+      "deskripsi": "Yuk diskusi bareng seputar Digital Marketing bersama-sama",
+      "category": "Digital Marketing",
+      "image": "/public/digitaldiscuss.png",
+      "jumlahOrang": 15
+    }
+  ]
+  

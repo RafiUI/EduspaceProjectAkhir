@@ -1,0 +1,795 @@
+{
+	"info": {
+		"_postman_id": "8255c1d7-3240-4d21-bf40-13a9b27c4436",
+		"name": "EduSpace Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23523513"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"password\" : \"rahasia\",\r\n      \"email\" : \"admin@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"admin\",\r\n    \"password\" : \"rahasia\",\r\n    \"email\" : \"admin@gmail.com\",\r\n    \"role\" : \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "category",
+					"item": [
+						{
+							"name": "add",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Rekomendasi\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/admin/category",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admin",
+										"category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/admin/category",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admin",
+										"category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get by id",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "update category",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Backend\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/admin/category/66d068bdb491e52f257e3718",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admin",
+										"category",
+										"66d068bdb491e52f257e3718"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete category",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/admin/category/66d068bdb491e52f257e3718",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admin",
+										"category",
+										"66d068bdb491e52f257e3718"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "expert",
+					"item": [
+						{
+							"name": "get all",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/admin/expert",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admin",
+										"expert"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add",
+							"request": {
+								"method": "POST",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "get by id",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/admin/expert/66cf2dc21fd643cdf95bd84f",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admin",
+										"expert",
+										"66cf2dc21fd643cdf95bd84f"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/admin/expert/66cf2dc21fd643cdf95bd84f",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admin",
+										"expert",
+										"66cf2dc21fd643cdf95bd84f"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "tutor",
+					"item": [
+						{
+							"name": "get all",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/admin/tutor",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admin",
+										"tutor"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add tutor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Pengembangan Backend",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Di kelas ini, kamu akan mempelajari dasar-dasar desain antarmuka pengguna (UI) dan pengalaman pengguna (UX). Kamu akan belajar bagaimana merancang tampilan aplikasi atau website yang tidak hanya menarik, tetapi juga intuitif dan mudah digunakan oleh pengguna. Selain itu, kamu akan mendalami proses riset pengguna untuk memahami kebutuhan dan perilaku mereka, serta cara mengaplikasikan hasil riset tersebut ke dalam desain yang efektif",
+											"type": "text"
+										},
+										{
+											"key": "jadwal",
+											"value": "Senin - Rabu 19:00 - 22:00",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "1500000",
+											"type": "text"
+										},
+										{
+											"key": "expert",
+											"value": "66d06958b491e52f257e3725",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "66d068f1b491e52f257e371b",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/zam/Pictures/Screenshots/Screenshot 2024-07-07 015107.png"
+										},
+										{
+											"key": "facilities[]",
+											"value": "\"Akses dimanapun kapanpun\"",
+											"type": "text"
+										},
+										{
+											"key": "facilities[]",
+											"value": "\"3 bulan akses\"",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/admin/tutor",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admin",
+										"tutor"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/admin/tutor/66cf62518d489408c83db22a",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admin",
+										"tutor",
+										"66cf62518d489408c83db22a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findbyid",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/admin/tutor/66cf62518d489408c83db22a",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admin",
+										"tutor",
+										"66cf62518d489408c83db22a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete tutor",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/admin/tutor/66d0610618429758328d99b9",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admin",
+										"tutor",
+										"66d0610618429758328d99b9"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "transactions",
+					"item": [
+						{
+							"name": "get list transactions",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "update transactions status",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\" : \"66d06b58b491e52f257e3765\",\r\n    \"status\" : \"accept\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/admin/transactions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admin",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZDA2ODE5YjQ5MWU1MmYyNTdlMzcxNSIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzI0OTM0MTg5LCJleHAiOjE3MjQ5Mzc3ODl9.UIDUJuOXPwjmqVFX4q6bbKMRpUbKC0NxQSlMZawkve4",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "discus",
+					"item": [
+						{
+							"name": "get all discus",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/discussion",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"discussion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add diskusi by uer",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "dumy judul",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "deskripsip",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "66d068f1b491e52f257e371b",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/zam/Pictures/Screenshots/Screenshot 2024-07-07 020636.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/discussion",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"discussion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "join discuss",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/discussion/66d06aa6b491e52f257e373f/join",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"discussion",
+										"66d06aa6b491e52f257e373f",
+										"join"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sendMessage",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\" : \"tanya apa?\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/discussion/66d06aa6b491e52f257e373f/sendMessage",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"discussion",
+										"66d06aa6b491e52f257e373f",
+										"sendMessage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get diskusi by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/discussion/66d06aa6b491e52f257e373f",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"discussion",
+										"66d06aa6b491e52f257e373f"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete discussion",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/discussion/66d06aa6b491e52f257e373f",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"discussion",
+										"66d06aa6b491e52f257e373f"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "tutor",
+					"item": [
+						{
+							"name": "get all tutor",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "get tutor by category",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/tutor/category/66d068f1b491e52f257e371b",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"tutor",
+										"category",
+										"66d068f1b491e52f257e371b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get detail tutor",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/tutor/66d06a2eb491e52f257e3736",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"tutor",
+										"66d06a2eb491e52f257e3736"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "transactions",
+					"item": [
+						{
+							"name": "buy tutor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "tutorId",
+											"value": "66d06a2eb491e52f257e3736",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/zam/Pictures/Screenshots/Screenshot 2024-07-07 015107.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/transaction/purchase",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transaction",
+										"purchase"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get tutor purchased",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/transaction/purcashed",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transaction",
+										"purcashed"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZDA2YTY1YjQ5MWU1MmYyNTdlMzczYiIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTcyNDkzNDc2MSwiZXhwIjoxNzI0OTM4MzYxfQ.CSQ8B-v2qwFTh1VTh-ZrSh4hZlD0Ksbc_hp6k44Hw-M",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "localhost:5000/v1/api",
+			"type": "string"
+		}
+	]
+}

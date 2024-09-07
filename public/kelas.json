@@ -1,0 +1,51 @@
+[
+    {
+      "_id": 1,
+      "nameTutor": "Annisa Rahayu",
+      "title": "UI & UX Design",
+      "deskripsi": "Belajar desain antarmuka pengguna dan pengalaman pengguna dengan menggunakan alat desain terbaru.",
+      "image": "/images/kelasuiux.png",
+      "harga": "Rp. 180.000"
+    },
+    {
+      "_id": 2,
+      "nameTutor": "Mutia Rahma",
+      "title": "Product Management",
+      "deskripsi": "Kuasai keterampilan manajemen produk dari konsep hingga peluncuran.",
+      "image": "/images/kelasproduct.png",
+      "harga": "Rp. 150.000"
+    },
+    {
+      "_id": 3,
+      "nameTutor": "Jason Susanto",
+      "title": "Front End",
+      "deskripsi": "Pelajari pengembangan front-end dengan teknologi terbaru seperti React dan Vue.js.",
+      "image": "/images/kelasfront.png",
+      "harga": "Rp. 200.000"
+    },
+    {
+      "_id": 4,
+      "nameTutor": "Siti Velyn",
+      "title": "Back End",
+      "deskripsi": "Menguasai pengembangan back-end dengan Node.js, Express, dan database.",
+      "image": "/images/kelasback.png",
+      "harga": "Rp. 220.000"
+    },
+    {
+      "_id": 5,
+      "nameTutor": "Kevin Susanto",
+      "title": "Mobile Development",
+      "deskripsi": "Belajar membuat aplikasi mobile yang responsif dengan React Native.",
+      "image": "/images/kelasmobile.png",
+      "harga": "Rp. 180.000"
+    },
+    {
+      "_id": 6,
+      "nameTutor": "Velma",
+      "title": "Digital Marketing",
+      "deskripsi": "Strategi pemasaran digital untuk mengoptimalkan visibilitas online dan meningkatkan konversi.",
+      "image": "/images/kelasdigital.png",
+      "harga": "Rp. 160.000"
+    }
+  ]
+  
